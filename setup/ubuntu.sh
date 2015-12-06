@@ -67,7 +67,7 @@ nvm alias default stable
 
 echo 
 echo "searching for compatible nvm versions v0.10.*"
-nvm_latest_version=`nvm ls-remote | grep -E "(^|\s)v0\.10\." | tail -n1 | grep -E -o "v\S+"`
+nvm_latest_version=`nvm ls-remote | grep -E "(^|\s)v0\.10\." | tail -n1 | grep -E -o "v[0123456789.]+"`
 echo "nvm version to install is $nvm_latest_version"
 echo 
 
