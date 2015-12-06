@@ -167,9 +167,11 @@ echo ---------------------------------------------------------------------------
 echo Running the Platform
 echo ====================
 echo 
-echo Please read https://github.com/CoderDojo/cp-local-development#localdev-run
-echo You can now run \"./localdev.js run zen\" and after this \"./localdev.js testdata zen\".
-echo
+echo "Please read https://github.com/CoderDojo/cp-local-development#localdev-run"
+echo "1. Open a new Terminal."
+echo "2. cd \"`pwd`\"."
+echo "3. Run \"./localdev.js run zen\" to start the Zen platform."
+echo "4. While Zen from step 3 is running, run \"./localdev.js testdata zen\" to add the test data to the platform."
 
 
 
