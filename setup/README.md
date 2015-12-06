@@ -6,4 +6,4 @@ They make a basic, automated install.
 
 Currently supported Operating Systems:
 
-- [Ubuntu](ubuntu.sh)
+- [Ubuntu](ubuntu.md)
