@@ -52,6 +52,7 @@ sudo apt-get -y install curl
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 
 source ~/.bashrc
+source ~/.nvm/nvm.sh
 
 if ! type nvm 1>/dev/null 2>/dev/null
 then
