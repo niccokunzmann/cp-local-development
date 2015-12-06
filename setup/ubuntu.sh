@@ -71,6 +71,12 @@ nvm_latest_version=`nvm ls-remote | grep -E "(^|\s)v0\.10\." | tail -n1 | grep -
 echo "nvm version to install is $nvm_latest_version"
 echo 
 
+if [ "$nvm_latest_version" == "" ]
+then
+  echo "Did not find any version compatible with v0.10.*"
+  exit 1
+fi
+
 nvm install $nvm_latest_version
 nvm use $nvm_latest_version
 nvm alias default $nvm_latest_version
@@ -84,6 +90,8 @@ echo
 sudo apt-get -y install git
 
 npm install -g grunt
+
+npm -g install npm@latest
 
 echo
 echo -------------------------------------------------------------------------------
