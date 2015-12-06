@@ -137,7 +137,9 @@ cd "$directory"
 
 git clone $clone_url . || { echo "ERROR: git could not clone $clone_url into $directory"; exit 1; }
 
-sudo apt-get -y install g++
+# command not found g++
+# /usr/share/unicode/UnicodeData.txt not found.
+sudo apt-get -y install g++ unicode-data
 
 npm install
 
