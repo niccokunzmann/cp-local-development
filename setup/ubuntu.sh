@@ -113,14 +113,27 @@ echo -n "Enter the repository url (default is \"$default_clone_url\" ):"
 read clone_url
 
 directory=cp-local-development
-mkdir $directory
+
+if [ -d "$directory" ]
+then
+  echo "Directory \"$directory\" already exists. Shall it be deleted?"
+  echo -n "delete \"$directory\" (y/N) "
+  read delete
+  if [ "$delete" == "y" ] || [ "$delete" == "Y" ]
+  then
+    echo "deleting $directory ..."
+    rm -rf $directory
+  fi
+fi
+
+mkdir -p "$directory"
 
 if [ "$clone_url" == "" ]
 then
   clone_url="$default_clone_url"
 fi
 
-cd $directory
+cd "$directory"
 
 git clone $clone_url . || { echo "ERROR: git could not clone $clone_url into $directory"; exit 1; }
 
