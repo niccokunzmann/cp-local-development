@@ -124,6 +124,8 @@ cd $directory
 
 git clone $clone_url . || { echo "ERROR: git could not clone $clone_url into $directory"; exit 1; }
 
+sudo apt-get -y install g++
+
 npm install
 
 ./localdev.js || { echo "ERROR: \"./localdev.js\""; exit 1; }
