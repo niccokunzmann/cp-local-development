@@ -51,6 +51,15 @@ done
 sudo apt-get -y install curl
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 
+source ~/.bashrc
+
+if ! type nvm 1>/dev/null 2>/dev/null
+then
+  echo "ERROR: nvm not found"
+  nvm
+  exit 1
+fi
+
 nvm install stable
 
 nvm alias default stable
